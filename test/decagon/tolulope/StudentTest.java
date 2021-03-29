@@ -5,10 +5,15 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class StudentTest {
+
+    //creating course object
     Course course = new Course("English Language", 3);
+
+    //creating myClass object
     Class myClass = new Class("S.S.1");
 
-    Student student = new Student("Paul", "Smith", 'M', "SRS1234", myClass, course );
+    //creating person object
+    Person student = new Person("Olakunle", "Fola", 'M', "ST091", course, myClass);
 
 
     //get registered course
@@ -26,12 +31,12 @@ class StudentTest {
     //test for student class
     @Test
     void getStudentClass() {
-        assertEquals("S.S.1", student.myClass().getMyClass());
+        assertEquals("S.S.1", student.getMyClass().getMyClass());
     }
 
     //test for student name
     @Test
     void getStudentName() {
-        assertEquals("Paul", student.getFirstName());
+        assertEquals("Olakunle", student.getFirstName());
     }
 }

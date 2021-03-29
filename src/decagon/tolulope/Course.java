@@ -20,7 +20,7 @@ public class Course {
         return "You have been registered to take this course";
     }
 
-    //method to get a course' title
+    //method to get a course title
     public String getCourseTitle() {
         return this.courseTitle;
     }

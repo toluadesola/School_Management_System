@@ -5,25 +5,32 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class TeacherTest {
-        Course course1 = new Course("Mathematics", 2);
 
-        Teacher teacher = new Teacher("Tayo", "Samson", 'M', "RS1031", course1);
+    //creating course object
+    Course course = new Course("Mathematics", 2);
 
+    //creating person object
+    Person teacher = new Person("Opeyemi", "Tomi", 'M', "Teacher", "RD1232", course);
+
+    //test takeCourse method
     @Test
     void takeCourse() {
-        assertEquals("You have been assigned to teach this course", teacher.course().takeCourse());
+        assertEquals("You have been assigned to teach this course", teacher.takeCourse());
     }
 
+    //get teacher firstName
     @Test
     void getFirstName() {
-        assertEquals("Tayo", teacher.getFirstName());
+        assertEquals("Opeyemi", teacher.getFirstName());
     }
 
+    //get course title
     @Test
     void getCourseTitle() {
         assertEquals("Mathematics", teacher.course().getCourseTitle());
     }
 
+    //get course duration
     @Test
     void getCourseDuration() {
         assertEquals("2hrs.", teacher.course().getCourseDuration());
