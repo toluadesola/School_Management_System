@@ -2,12 +2,9 @@ package decagon.tolulope;
 
 import org.junit.jupiter.api.Test;
 
-import java.security.Principal;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 class PrincipalTest {
-
 
     //creating applicant object
     Person applicant1 = new Person("Olaoluwa", "Paul", 'M', 23);
@@ -25,7 +22,7 @@ class PrincipalTest {
     //test admission method
     @Test
     void applicant1() {
-        assertEquals("Admission Successful.", principal.checkAdmission(applicant1.getAge())); //test admis
+        assertEquals("Admission Successful.", principal.checkAdmission(applicant1.getAge()));
     }
 
     @Test

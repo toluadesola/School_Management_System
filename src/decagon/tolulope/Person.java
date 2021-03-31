@@ -1,11 +1,11 @@
 package decagon.tolulope;
 
-public class Person implements PersonInterface {
+public class Person extends Admin {
     private String firstName;
     private String lastName;
     private char gender;
     private int age;
-    private String designation;
+    private String designation;  //designation can be: Principal, Teacher or Non-Teaching
     private String staffID;
     private String studentID;
     private Course course;
@@ -46,29 +46,6 @@ public class Person implements PersonInterface {
         this.lastName = lastName;
         this.gender = gender;
         this.age = age;
-    }
-
-    //method to assign the teacher to take a course
-    public String takeCourse() {
-        if(this.designation.equals("Teacher")){
-            return "You have been assigned to teach this course";
-        }else {
-            return "You cannot teach a course";
-        }
-    }
-
-    //method to expel Student
-    public String expelStudent(){
-        return "Hello, you have been expelled from this school";
-    }
-
-    //method to check admission based on age criteria
-    public String checkAdmission(int age){
-        if(age >= 16){
-            return "Admission Successful.";
-        }else {
-            return "Admission not successful.";
-        }
     }
 
     public String getFirstName() {

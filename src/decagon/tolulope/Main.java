@@ -22,8 +22,15 @@ public class Main {
         //creating student object
         Person student = new Person("Olakunle", "Fola", 'M', "ST091", course, myClass);
 
+        //creating non-teaching staff object
+        Person nonTeachingStaff = new Person("Ope", "Samuel", 'F', "Non-Teaching", "ES321");
+
+
         //Assign teacher to a course
-        System.out.println(teacher.takeCourse());
+        System.out.println(teacher.takeCourse(teacher.getDesignation()));
+
+        //Assign teacher to a course
+        System.out.println(nonTeachingStaff.takeCourse(nonTeachingStaff.getDesignation()));
 
         //Test expel student function
         System.out.println(principal.expelStudent());
@@ -37,5 +44,8 @@ public class Main {
 
         //Get students course
         System.out.println("The title of your course is " + student.course().getCourseTitle());
+
+        //Pay Salaries
+        System.out.println(nonTeachingStaff.paySalaries(nonTeachingStaff.getDesignation()));
     }
 }
